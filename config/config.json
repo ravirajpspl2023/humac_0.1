@@ -1,0 +1,20 @@
+{
+    "Humac_client": {
+        "broker": "dev-broker.humac.live",
+        "port": 1883,
+        "username":"",
+        "password":"",
+        "baseTopic": "humac",
+        "tenantid": "15",
+        "machineid": "humac001",
+        "edgeid": "e400099",
+        "type":"mqtt"
+    },
+    "connectors": [
+       
+        {
+            "type": "mqtt",
+             "configPath":"./config/mqtt.json"
+        }
+    ]
+}

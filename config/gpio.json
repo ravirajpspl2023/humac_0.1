@@ -1,0 +1,9 @@
+{
+    "setmode":"BMC",
+    "timedelaysec":1,
+    "timeseries":[{"tag":"V1","setup":"IN","pin":2,"pull_up_down":"PUD_UP"},
+                  {"tag":"V2","setup":"IN","pin":3,"pull_up_down":"PUD_UP"},
+                  {"tag":"V3","setup":"IN","pin":4,"pull_up_down":"PUD_UP"},
+                  {"tag":"V4","setup":"IN","pin":17,"pull_up_down":"PUD_UP"},
+                  {"tag":"V5","setup":"IN","pin":27,"pull_up_down":"PUD_UP"}]
+}

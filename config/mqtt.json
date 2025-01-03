@@ -1,0 +1,7 @@
+{
+    "targetBroker":"mosquitto",
+    "port":1883,
+    "username":"",
+    "password":"",
+    "subscribeTopic":"pspl-iot/telemetry_cnc/#"
+}

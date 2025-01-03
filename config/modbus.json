@@ -1,0 +1,80 @@
+{
+        "method":"rtu",
+        "port":"/dev/ttyUSB0",
+        "unitId": 1,
+        "bytesize":8,
+        "stopbits":1,
+        "timeout":10,
+        "parity":"E",
+        "baudrate":19200,
+        "byteorder":2,
+        "timedelay":1,
+
+        "timeseries":[
+              {
+                "tag": "SolValv_StrokeCntr",
+                "type": "bit",
+                "functionCode": 1,
+                "objectsCount": 1,
+                "address": 0
+              },
+              {
+                "tag": "FaultIndicator",
+                "type": "bit",
+                "functionCode": 1,
+                "objectsCount": 1,
+                "address": 1
+              },
+              {
+                "tag": "HydrOverload_indicator",
+                "type": "bit",
+                "functionCode": 1,
+                "objectsCount": 1,
+                "address": 2
+              },
+              {
+                "tag": "MainMotorForward",
+                "type": "bit",
+                "functionCode": 1,
+                "objectsCount": 1,
+                "address": 3
+              },
+              {
+                "tag": "MainMotorReverse",
+                "type": "bit",
+                "functionCode": 1,
+                "objectsCount": 1,
+                "address": 4
+              },
+              {
+                "tag": "HydrPumpValve",
+                "type": "bit",
+                "functionCode": 1,
+                "objectsCount": 1,
+                "address": 5
+              },
+              {
+                "tag": "SlideMotor_ON",
+                "type": "bit",
+                "functionCode": 1,
+                "objectsCount": 1,
+                "address": 6
+              },
+              {
+                "tag": "GreasePump",
+                "type": "bit",
+                "functionCode": 1,
+                "objectsCount": 1,
+                "address": 7
+              },
+              {
+                "tag": "StrokeCounterResig",
+                "type": "32int",
+                "functionCode": 4,
+                "objectsCount": 2,
+                "address": 0
+              }
+
+        ]
+        
+}
