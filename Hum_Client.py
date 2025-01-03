@@ -95,7 +95,6 @@ class MQTTPublisher(threading.Thread):
                                     break 
                             elif cureent_data ['ts'] and cureent_data['parameters'] :
                                 for key,value in cureent_data['parameters'].items():
-                                    
                                     if self.connected :
                                         payload=json.dumps({
                                                         "name":key,

@@ -41,8 +41,6 @@ class MqttConnector(threading.Thread):
             self.connected = True
             print(f" {self.targetBroker } is connected")
             self.client.subscribe(self.subscribeTopic)
-
-
         else:
             print(f"Failed to connect, {self.targetBroker}")
 
