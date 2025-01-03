@@ -88,8 +88,11 @@ class MQTTPublisher(threading.Thread):
                         for event in events:
                             cureent_data = json.loads(event)
                             if self.type == 'mqtt' and self.connected :
-                                print(cureent_data)
                                 result=self.client.publish(f"{self.topic}/{self.edgeid}/telemetry",json.dumps(cureent_data),qos=1)
+                                if result.rc != 0 : 
+                                    print('client is disconnected')
+                                    self.client.loop_stop()
+                                    break 
                             elif cureent_data ['ts'] and cureent_data['parameters'] :
                                 for key,value in cureent_data['parameters'].items():
                                     

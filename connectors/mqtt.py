@@ -45,23 +45,13 @@ class MqttConnector(threading.Thread):
 
         else:
             print(f"Failed to connect, {self.targetBroker}")
-    
-    # def on_subscribe(cself,lient, userdata, mid, reason_code_list, properties):
-    # # Since we subscribed only for a single channel, reason_code_list contains
-    # # a single entry
-    #     if reason_code_list[0].is_failure:
-    #         print(f"Broker rejected you subscription: {reason_code_list[0]}")
-    #     else:
-    #         print(f"Broker granted the following QoS: {reason_code_list[0].value}")
 
     def on_message(self,client, userdata, msg):
-            print(f' Topic : {msg.topic}')
             try :
                 payload_str = msg.payload.decode("utf-8")
                 payload = json.loads(payload_str)
                 self.Database.put(json.dumps(payload))
                 # payload = json.loads(msg.payload.decode("utf-8"))
-                print(payload)
                 # self.Database.put(json.dumps(payload))
                 sleep(0.1)
             except Exception as e:
